@@ -1,4 +1,6 @@
-.button {
+.button,
+.enter,
+.clear {
   width: 80px;
   height: 40px;
   display: flex;
@@ -6,12 +8,12 @@
   justify-content: center;
   size: 18px;
   border: 1px solid black;
-  margin: 0;
+  margin: 2;
 }
 #display {
   height: 40px;
-  width: 240px;
-  border: 2px solid black;
+  width: 244px;
+  border: 1px solid black;
 }
 .calculator {
   display: flex;

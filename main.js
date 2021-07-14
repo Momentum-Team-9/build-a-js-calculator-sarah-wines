@@ -1,50 +1,15 @@
-console.log(document.getElementById('num1'));
-const num1 = document.getElementById('num1');
+const buttons = document.querySelectorAll('.button');
 const display = document.getElementById('display');
-console.log(num1);
+const enter = document.getElementById('num=');
+let math = '';
+for (let button of buttons) {
+  button.addEventListener('click', function (event) {
+    display.innerText += event.target.innerText;
+    math += button.innerText;
+  });
+}
 
-num1.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
-});
-num2.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText = display.innerText + event.target.innerText;
-});
-num3.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
-});
-num4.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
-});
-num5.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
-});
-num6.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
-});
-num7.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
-});
-num8.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
-});
-num9.addEventListener('click', function (event) {
-  console.log(event.target.innerText);
-  console.log('button clicked');
-  display.innerText += event.target.innerText;
+enter.addEventListener('click', function (event) {
+  let answer = eval(math);
+  display.textContent = answer;
 });
